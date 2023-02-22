@@ -12,23 +12,23 @@ const Container = styled.div`
 	color: ${(props) => props.theme.text};
 	z-index: 5;
 
-    a { 
-        display: flex;
-        align-items: flex-end;
-    }
+	a {
+		display: flex;
+		align-items: flex-end;
+	}
 
 	svg {
 		width: 4rem;
 		height: auto;
 		overflow: visible;
-        stroke-linejoin; round;
-        stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-linecap: round;
 
-        g{ 
-            path{
-                stroke: ${(props) => props.theme.text}
-            }
-        }
+		g {
+			path {
+				stroke: ${(props) => props.theme.text};
+			}
+		}
 	}
 `;
 
