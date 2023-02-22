@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import React, { useRef, useLayoutEffect } from "react";
@@ -5,6 +6,15 @@ import React, { useRef, useLayoutEffect } from "react";
 import styled from "styled-components";
 
 import img1 from "../assets/Images/1.webp";
+import img2 from "../assets/Images/2.webp";
+import img3 from "../assets/Images/3.webp";
+import img4 from "../assets/Images/4.webp";
+import img5 from "../assets/Images/5.webp";
+import img6 from "../assets/Images/6.webp";
+import img7 from "../assets/Images/7.webp";
+import img8 from "../assets/Images/8.webp";
+import img9 from "../assets/Images/9.webp";
+import img10 from "../assets/Images/10.webp";
 
 const Section = styled.section`
 	min-height: 100vh;
@@ -84,10 +94,13 @@ const Right = styled.div`
 	}
 `;
 
-const Item = styled.div`
-	display: inline-block;
+const Item = styled(motion.div)`
 	width: 20rem;
 	margin-right: 6rem;
+
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	img {
 		width: 100%;
 		height: auto;
@@ -95,15 +108,23 @@ const Item = styled.div`
 	}
 
 	h1 {
+		display: inline-block;
+		width: fit-content;
 		font-weight: 500;
 		text-align: center;
 		cursor: pointer;
 	}
 `;
 
+//sets grayscale for the items that are not on screen
 const Product = ({ img, title = "" }) => {
 	return (
-		<Item>
+		<Item
+			initial={{ filter: "grayscale(100%)" }}
+			whileInView={{ filter: "grayscale(0%)" }}
+			transition={{ duration: 0.5 }}
+			viewport={{ once: false, amount: "all" }}
+		>
 			<img src={img} alt={title} />
 			<h1>{title}</h1>
 		</Item>
@@ -180,17 +201,16 @@ const Shop = () => {
 				</p>
 			</Left>
 			<Right ref={Horizontalref}>
-				<Product img={img1} title="xyz" />
-				<Product img={img1} title="xyz" />
-				<Product img={img1} title="xyz" />
-				<Product img={img1} title="xyz" />
-				<Product img={img1} title="xyz" />
-				<Product img={img1} title="xyz" />
-				<Product img={img1} title="xyz" />
-				<Product img={img1} title="xyz" />
-				<Product img={img1} title="xyz" />
-				<Product img={img1} title="xyz" />
-				<Product img={img1} title="xyz" />
+				<Product img={img1} title="Man Basics" />
+				<Product img={img2} title="Tops" />
+				<Product img={img3} title="Sweatshirts" />
+				<Product img={img4} title="Ethnic Wear" />
+				<Product img={img5} title="Blazers" />
+				<Product img={img6} title="Suits" />
+				<Product img={img7} title="Antiques" />
+				<Product img={img8} title="Jewelery" />
+				<Product img={img9} title="Watches" />
+				<Product img={img10} title="Special Edition" />
 			</Right>
 		</Section>
 	);
