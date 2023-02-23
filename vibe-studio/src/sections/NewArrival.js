@@ -124,7 +124,7 @@ const NewArrival = () => {
 					scroller: "main", //locomotive element
 
 					pin: true,
-					markers: true,
+					// markers: true,
 				},
 				// we have to increase scrolling height of this section same as the scrolling element width
 
@@ -147,7 +147,7 @@ const NewArrival = () => {
 						scroller: "main", //locomotive element
 
 						// pin: true,
-						markers: true,
+						// markers: true,
 					},
 					// we have to increase scrolling height of this section same as the scrolling element width
 				}
@@ -155,7 +155,11 @@ const NewArrival = () => {
 			ScrollTrigger.refresh();
 		}, 1000);
 
-		return () => {};
+		return () => {
+			// lets cleart instances
+			t1.kill();
+			ScrollTrigger.kill();
+		};
 	}, []);
 	return (
 		<Section ref={ref}>
