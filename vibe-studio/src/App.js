@@ -11,9 +11,19 @@ import Shop from "./sections/Shop";
 import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 import Banner from "./sections/Banner";
 import NewArrival from "./sections/NewArrival";
+import Loader from "./components/Loader";
+import { useState, useEffect } from "react";
 
 function App() {
 	const containerRef = useRef(null);
+
+	const [loaded, setLoaded] = useState(false);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setLoaded(true);
+		}, 3000);
+	}, []);
 
 	return (
 		<div className="App">
@@ -23,6 +33,13 @@ function App() {
 					options={{
 						smooth: true,
 						// ... all available Locomotive Scroll instance options
+
+						smartphone: {
+							smooth: true,
+						},
+						tablet: {
+							smooth: true,
+						},
 					}}
 					watch={
 						[
@@ -33,6 +50,8 @@ function App() {
 					}
 					containerRef={containerRef}
 				>
+					<AnimatePresence>{loaded ? null : <Loader />}</AnimatePresence>
+
 					<ScrollTriggerProxy />
 					<AnimatePresence>
 						<main className="main" data-scroll-container ref={containerRef}>

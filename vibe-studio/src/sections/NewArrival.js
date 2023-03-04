@@ -26,7 +26,7 @@ const Overlay = styled.div`
 	width: 30vw;
 	height: 90vh;
 
-	box-shadow: 0 0 5vw ${(props) => props.theme.text};
+	box-shadow: 0 0 4vw ${(props) => props.theme.text};
 	border: 3px solid black;
 	z-index: 11;
 `;

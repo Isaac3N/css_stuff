@@ -12,6 +12,14 @@ const Section = styled.section`
 	display: flex;
 
 	margin: 0 auto;
+
+	@media (max-width: 48rem) {
+		width: 90vw;
+	}
+
+	@media (max-width: 30rem) {
+		width: 100vw;
+	}
 `;
 
 const Title = styled.h1`

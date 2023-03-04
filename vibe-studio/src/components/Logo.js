@@ -47,7 +47,7 @@ const textVariants = {
 		x: -5,
 
 		transition: {
-			duration: 2,
+			duration: 2, //2
 			delay: 2,
 			ease: "easeInOut",
 		},
