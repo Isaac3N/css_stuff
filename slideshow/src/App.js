@@ -1,5 +1,9 @@
 import "./App.css";
 import React from "react";
+import image1 from "./2.jpg";
+import image2 from "./3.jpg";
+import image3 from "./4.jpg";
+import ImageList from "./ImageList";
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
 const delay = 2500;
@@ -13,6 +17,7 @@ function App() {
 			clearTimeout(timeoutRef.current);
 		}
 	}
+	const imageUrls = [image2, image3];
 
 	React.useEffect(() => {
 		resetTimeout();
@@ -35,9 +40,10 @@ function App() {
 				className="slideshowSlider"
 				style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
 			>
-				{colors.map((backgroundColor, index) => (
-					<div className="slide" key={index} style={{ backgroundColor }}></div>
-				))}
+				{/* {colors.map((backgroundColor, index) => (
+					<div className="slide" style={{ backgroundColor }}></div>
+				))} */}
+				<ImageList key={index} className="slide" images={imageUrls} />
 			</div>
 
 			<div className="slideshowDots">
