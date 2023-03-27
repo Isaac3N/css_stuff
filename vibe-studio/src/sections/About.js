@@ -40,6 +40,30 @@ const Left = styled.div`
 	position: relative;
 	z-index: 5;
 	margin-top: 20%;
+
+	@media (max-width: 64em) {
+		width: 80%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transition: transform(-50%, -50%) !important;
+		margin: 0 auto;
+
+		padding: 2rem;
+		font-weight: 600;
+
+		backdrop-filter: blur(2px);
+		background-color: ${(props) => `rgba(${props.theme.textRgba}, 0.4)`};
+		border-radius: 20px;
+	}
+
+	@media (max-width: 48rem) {
+		font-size: ${(props) => props.theme.fontlg};
+	}
+
+	@media (max-width: 30rem) {
+		font-size: ${(props) => props.theme.fontsm};
+	}
 `;
 const Right = styled.div`
 	width: 50%;

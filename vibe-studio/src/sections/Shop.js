@@ -78,10 +78,10 @@ const Left = styled.div`
 
 const Right = styled.div`
 	position: absolute;
-	left: 35%;
-	padding-left: 30%;
+	left: 0;
+	padding-left: 0px;
 
-	background-color: ${(props) => props.theme.grey};
+	/* background-color: ${(props) => props.theme.grey}; */
 	min-height: 100vh;
 	/* width: 65%; */
 	display: flex;
@@ -94,8 +94,24 @@ const Right = styled.div`
 	}
 `;
 
+const Image1 = styled.div`
+	position: absolute;
+	left: 0;
+	padding-left: 0px;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	h1 {
+		width: 5rem;
+		margin: 0 2rem;
+	}
+`;
+
 const Item = styled(motion.div)`
-	width: 20rem;
+	width: 50rem;
+
 	margin-right: 6rem;
 
 	flex-direction: column;
@@ -189,7 +205,7 @@ const Shop = () => {
 			<Title data-scroll data-scroll-speed="-1">
 				New Collection
 			</Title>
-			<Left>
+			{/* <Left>
 				<p>
 					The brand new collection is currently being developed in USA. We
 					create our products using best quality material, including the use of
@@ -203,18 +219,50 @@ const Shop = () => {
 					well. It is great for us to carry our new clothes all around the
 					country and look different.
 				</p>
-			</Left>
+			</Left> */}
 			<Right ref={Horizontalref}>
-				<Product img={img1} title="Man Basics" />
-				<Product img={img2} title="Tops" />
-				<Product img={img3} title="Sweatshirts" />
-				<Product img={img4} title="Ethnic Wear" />
-				<Product img={img5} title="Blazers" />
-				<Product img={img6} title="Suits" />
-				<Product img={img7} title="Antiques" />
-				<Product img={img8} title="Jewelery" />
-				<Product img={img9} title="Watches" />
-				<Product img={img10} title="Special Edition" />
+				{/* <Left>
+					<p>
+						The brand new collection is currently being developed in USA. We
+						create our products using best quality material, including the use
+						of some of the pure fabrics to make our products. All products are
+						made using the best materials, from the finest cotton to the finest
+						fabrics.
+						<br />
+						<br />
+						We have lots of different clothing options like shoes, jackets and
+						dresses. Not only clothes but we also provide unique Jewellery as
+						well. It is great for us to carry our new clothes all around the
+						country and look different.
+					</p>
+				</Left> */}
+
+				<Item>
+					<img src={img1} alt="Man Basics" />
+					<h1>Man Basics</h1>
+				</Item>
+				<Item>
+					<img src={img1} alt="Man Basics" />
+					<h1>Man Basics</h1>
+				</Item>
+				<Item>
+					<img src={img1} alt="Man Basics" />
+					<h1>Man Basics</h1>
+				</Item>
+				<Item>
+					<img src={img1} alt="Man Basics" />
+					<h1>Man Basics</h1>
+				</Item>
+				{/* <Item img={img1} title="Man Basics" />
+				<Item img={img2} title="Tops" />
+				<Item img={img3} title="Sweatshirts" />
+				<Item img={img4} title="Ethnic Wear" />
+				<Item img={img5} title="Blazers" />
+
+				<Item img={img7} title="Antiques" />
+				<Item img={img8} title="Jewelery" />
+				<Item img={img9} title="Watches" />
+				<Item img={img10} title="Special Edition" /> */}
 			</Right>
 		</Section>
 	);

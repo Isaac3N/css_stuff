@@ -13,6 +13,8 @@ import Banner from "./sections/Banner";
 import NewArrival from "./sections/NewArrival";
 import Loader from "./components/Loader";
 import { useState, useEffect } from "react";
+import NewShop from "./sections/NewShop";
+import NewArrivals1 from "./sections/NewArrivals1";
 
 function App() {
 	const containerRef = useRef(null);
@@ -57,9 +59,11 @@ function App() {
 						<main className="main" data-scroll-container ref={containerRef}>
 							<Home />
 							<About />
-							<Shop />
+							{/* <Shop /> */}
+							<NewShop />
 							<Banner />
-							<NewArrival />
+							{/* <NewArrival /> */}
+							<NewArrivals1 />
 						</main>
 					</AnimatePresence>
 				</LocomotiveScrollProvider>
