@@ -81,7 +81,7 @@ const Right = styled.div`
 	left: 35%;
 	padding-left: 30%;
 
-	background-color: ${(props) => props.theme.grey};
+	/* background-color: ${(props) => props.theme.grey}; */
 	min-height: 100vh;
 	/* width: 65%; */
 	display: flex;

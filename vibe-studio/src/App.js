@@ -60,10 +60,11 @@ function App() {
 							<Home />
 							<About />
 							{/* <Shop /> */}
-							<NewShop />
+
 							<Banner />
+							<NewShop />
 							{/* <NewArrival /> */}
-							<NewArrivals1 />
+							{/* <NewArrivals1 /> */}
 						</main>
 					</AnimatePresence>
 				</LocomotiveScrollProvider>

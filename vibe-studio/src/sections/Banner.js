@@ -24,13 +24,13 @@ const Container = styled.div`
 const BannerComponent = styled.h1`
 	font-size: ${(props) => props.theme.fontxxxl};
 	font-family: "Kaushan Script";
-	color: ${(props) => props.theme.text};
+	color: ${(props) => props.theme.body};
 	white-space: nowrap;
 	text-transform: uppercase;
 	line-height: 1;
 	span {
 		display: block;
-		background-color: ${(props) => props.theme.body};
+		/* background-color: ${(props) => props.theme.body}; */
 		padding: 1rem 2 rem;
 	}
 `;
@@ -42,7 +42,7 @@ const Banner = () => {
 				<BannerComponent>
 					<span
 						data-scroll
-						data-scroll-direction="horizontal"
+						data-scroll-direction="vertical"
 						data-scroll-speed="8"
 						data-scroll-target="#up"
 					>
@@ -52,7 +52,7 @@ const Banner = () => {
 				<BannerComponent>
 					<span
 						data-scroll
-						data-scroll-direction="horizontal"
+						data-scroll-direction="vertical"
 						data-scroll-speed="-6"
 						data-scroll-target="#up"
 					>
@@ -63,7 +63,7 @@ const Banner = () => {
 				<BannerComponent>
 					<span
 						data-scroll
-						data-scroll-direction="horizontal"
+						data-scroll-direction="vertical"
 						data-scroll-speed="6"
 						data-scroll-target="#up"
 					>
@@ -74,7 +74,7 @@ const Banner = () => {
 				<BannerComponent>
 					<span
 						data-scroll
-						data-scroll-direction="horizontal"
+						data-scroll-direction="vertical"
 						data-scroll-speed="-4"
 						data-scroll-target="#up"
 					>
@@ -84,7 +84,7 @@ const Banner = () => {
 				<BannerComponent>
 					<span
 						data-scroll
-						data-scroll-direction="horizontal"
+						data-scroll-direction="vertical"
 						data-scroll-speed="6"
 						data-scroll-target="#up"
 					>
