@@ -13,7 +13,7 @@ gsap.to(".square", {
 		// several toggle action keys are play, resume, reverse, restart, reset, complete, none
 		// end: () => `+=${document.querySelector(".square").offsetHeight}`,
 		// markers: true,
-
+		pin: true,
 		scrub: 4,
 
 		markers: {
