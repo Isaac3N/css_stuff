@@ -8,7 +8,7 @@ gsap.to(".square", {
 		trigger: ".square",
 		// the animation starts when the  top of the trigger element meets the center of thee viewport
 		start: "top 30%",
-		end: "center 20%",
+		end: () => `+=${document.querySelector(".square").offsetHeight}`,
 		markers: true,
 
 		// markers: {
