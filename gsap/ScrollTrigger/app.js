@@ -7,12 +7,14 @@ gsap.to(".square", {
 	scrollTrigger: {
 		trigger: ".square",
 		// the animation starts when the  top of the trigger element meets the center of thee viewport
-		start: "top 60%",
-		end: "top 40%",
-		toggleActions: "restart reverse resume reset", // onEnter onLeave onEnterBack onLeaveBack
+		start: "top 80%",
+		end: "top 30%",
+		toggleActions: "restart none none none", // onEnter onLeave onEnterBack onLeaveBack
 		// several toggle action keys are play, resume, reverse, restart, reset, complete, none
 		// end: () => `+=${document.querySelector(".square").offsetHeight}`,
 		// markers: true,
+
+		scrub: 4,
 
 		markers: {
 			startColor: "purple",
