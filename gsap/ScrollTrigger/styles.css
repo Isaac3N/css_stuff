@@ -21,9 +21,14 @@ body {
 	background-color: turquoise;
 }
 
+.red {
+	background-color: red;
+}
+
+/* 
 .square2 {
 	margin-top: 300px;
 	width: 150px;
 	height: 150px;
 	background-color: wheat;
-}
+} */
